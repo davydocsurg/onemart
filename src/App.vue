@@ -9,8 +9,8 @@
       </div>
             <section class="jumbotron text-center shadow-lg" style="">
                 <div class="container note">
-                <h1>Welcome To Onemart</h1>
-                <p class="lead  text-dark">
+                <h1 class="lab">Welcome To Onemart</h1>
+                <p class="lead lab">
                   Something short and leading about the collection
                   below—its contents, the creator, etc. Make it short and sweet, but not too short 
                   so folks don’t simply skip over it entirely.

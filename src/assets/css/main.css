@@ -57,7 +57,7 @@
   }
 
   .note {
-    margin-top: 150px;
+    margin-top: 10px;
     line-height: 1.2;
     /* color: white; */
   }
@@ -163,8 +163,112 @@
   
 /* media queries */
 
+@media (min-width: 721px) {
+  .jumbotron {
+    background-image: url(/penph.jpeg);
+    /* background-attachment: fixed; */
+    margin-right: 50px;
+    margin-left: 50px;
+    flex-basis: 50%;
+    margin-top: 130px;
+    border-radius: 2% ;
+  }
+}
 
-@media (max-width: 360px) {
+@media (max-width: 721px) {
+  .onemart {
+    display: block;
+    margin-left: 0% !important;
+
+  }
+
+  .jumbotron {
+    margin-left: 1.3rem !important;
+    margin-right: 1.3rem !important;
+  }
+
+  .log {
+    margin-top: 10px !important;
+    margin-left: 7.7rem !important;
+    margin-bottom: 3rem;
+  }
+
+.note {
+  margin-top: 0px !important;
+}
+}
+
+
+@media (max-width: 687px) {
+  .onemart {
+    display: block;
+    margin-left: 0% !important;
+
+  }
+
+  .jumbotron {
+    margin-left: .6rem !important;
+    margin-right: 1.3rem !important;
+  }
+
+  .log {
+    margin-top: 10px !important;
+    margin-left: 5.7rem !important;
+    margin-bottom: 3rem;
+  }
+
+.note {
+  margin-top: 0px !important;
+}
+}
+
+@media (max-width: 660px) {
+  .onemart {
+    display: block;
+    margin-left: 0% !important;
+
+  }
+
+  .jumbotron {
+    padding-left: .9rem !important;
+    padding-right: .9rem !important;
+  }
+
+  .log {
+    margin-top: 10px !important;
+    margin-left: 5.7rem !important;
+    margin-bottom: 3rem;
+  }
+
+.note {
+  margin-top: 0px !important;
+}
+}
+
+@media (max-width: 620px) {
+  .onemart {
+    display: block;
+    margin-left: 0% !important;
+
+  }
+
+  .jumbotron {
+    padding-left: .9rem !important;
+    margin-right: .9rem !important;
+  }
+
+  .log {
+    margin-top: 10px !important;
+    margin-left: 5.7rem !important;
+    margin-bottom: 3rem;
+  }
+
+.note {
+  margin-top: 0px !important;
+}
+}
+
+/* @media (max-width: 447px) {
   .onemart {
     display: block;
 
@@ -174,36 +278,5 @@
     margin-top: 10px !important;
     margin-left: .5rem !important;
   }
+} */
 
-  .note {
-    margin-top: 50px !important;
-  }
-}
-
-@media (max-width: 447px) {
-  .onemart {
-    display: block;
-
-  }
-
-  .log {
-    margin-top: 10px !important;
-    margin-left: .5rem !important;
-  }
-}
-
-  @media (width: 414px) {
-    .onemart {
-      display: block;
-
-    }
-
-    .log {
-      margin-top: 10px !important;
-      margin-left: 1.7rem !important;
-    }
-
-  .note {
-    margin-top: 50px !important;
-  }
-}

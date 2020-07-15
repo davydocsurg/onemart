@@ -3,7 +3,7 @@
 		<div class="card log shadow-lg">
 		<div class="mt-3 text-center "><h3 class="lab">Sign In</h3></div>
 		<div class="card-body">
-				<form class="">
+		<form class="">
 
 			<div class="form-group mt-5">
 					<label class="lab"><strong>Email address</strong></label>
