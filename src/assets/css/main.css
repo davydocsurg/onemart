@@ -22,9 +22,9 @@
     display: inline-flex;
   }
 
-  .lnki {
+  /* .lnki {
     text-align: right;
-  }
+  } */
 
   .lab {
     color: black;
@@ -33,8 +33,8 @@
   .jumbotron {
     background-image: url(/penph.jpeg);
     /* background-attachment: fixed; */
-    margin-right: 50px;
-    margin-left: 50px;
+    margin-right: 30px;
+    margin-left: 30px;
     flex-basis: 50%;
     margin-top: 130px;
     border-radius: 2% ;
@@ -57,7 +57,7 @@
   }
 
   .note {
-    margin-top: 10px;
+    margin-top: 6rem;
     line-height: 1.2;
     /* color: white; */
   }
@@ -115,6 +115,7 @@
     position: relative;
 } */
   
+
 .log {
   margin-top: 130px;
   background-image: url(/penph.jpeg);
@@ -163,33 +164,22 @@
   
 /* media queries */
 
-@media (min-width: 721px) {
-  .jumbotron {
-    background-image: url(/penph.jpeg);
-    /* background-attachment: fixed; */
-    margin-right: 50px;
-    margin-left: 50px;
-    flex-basis: 50%;
-    margin-top: 130px;
-    border-radius: 2% ;
-  }
-}
-
-@media (max-width: 721px) {
+@media (max-width: 722px) {
   .onemart {
     display: block;
     margin-left: 0% !important;
-
+    justify-content: center !important;
   }
 
   .jumbotron {
-    margin-left: 1.3rem !important;
-    margin-right: 1.3rem !important;
+    max-width: 90% !important;
   }
 
   .log {
     margin-top: 10px !important;
-    margin-left: 7.7rem !important;
+    margin-left: 2.2rem !important;
+    max-width: 85% !important;
+    /* margin-right: 5.7rem !important; */
     margin-bottom: 3rem;
   }
 
@@ -198,85 +188,54 @@
 }
 }
 
-
-@media (max-width: 687px) {
+@media (max-width: 557px) {
   .onemart {
     display: block;
     margin-left: 0% !important;
-
+    justify-content: center !important;
   }
 
   .jumbotron {
-    margin-left: .6rem !important;
-    margin-right: 1.3rem !important;
+    /* margin-left: 1rem !important; */
+    /* margin-right: 6.6rem !important; */
+    max-width: 89% !important;
   }
 
   .log {
     margin-top: 10px !important;
-    margin-left: 5.7rem !important;
+    /* margin-left: .6rem !important; */
+    /* margin-right: 5.7rem !important; */
+    max-width: 80% !important;
     margin-bottom: 3rem;
   }
 
-.note {
-  margin-top: 0px !important;
-}
+  .note {
+    margin-top: 0px !important;
+  }
 }
 
-@media (max-width: 660px) {
+@media (max-width: 406px) {
   .onemart {
     display: block;
     margin-left: 0% !important;
-
+    justify-content: center !important;
   }
 
   .jumbotron {
-    padding-left: .9rem !important;
-    padding-right: .9rem !important;
+    /* margin-left: 1rem !important; */
+    /* margin-right: 6.6rem !important; */
+    max-width: 88% !important;
   }
 
   .log {
     margin-top: 10px !important;
-    margin-left: 5.7rem !important;
+    /* margin-left:  .5rem !important; */
+    /* margin-right: 5.7rem !important; */
+    max-width: 80% !important;
     margin-bottom: 3rem;
   }
 
-.note {
-  margin-top: 0px !important;
+  .note {
+    margin-top: 0px !important;
+  }
 }
-}
-
-@media (max-width: 620px) {
-  .onemart {
-    display: block;
-    margin-left: 0% !important;
-
-  }
-
-  .jumbotron {
-    padding-left: .9rem !important;
-    margin-right: .9rem !important;
-  }
-
-  .log {
-    margin-top: 10px !important;
-    margin-left: 5.7rem !important;
-    margin-bottom: 3rem;
-  }
-
-.note {
-  margin-top: 0px !important;
-}
-}
-
-/* @media (max-width: 447px) {
-  .onemart {
-    display: block;
-
-  }
-
-  .log {
-    margin-top: 10px !important;
-    margin-left: .5rem !important;
-  }
-} */
-

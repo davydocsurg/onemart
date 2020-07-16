@@ -1,6 +1,20 @@
 <template>
-  <div class="container">
-		<div class="card log shadow-lg mb-5">
+<div class="onemart">
+		<section class="jumbotron text-center shadow-lg col-md-8" style="">
+			<div class="container note">
+			<h1 class="lab">Welcome To Onemart</h1>
+			<p class="lead lab">
+				Something short and leading about the collection
+				below—its contents, the creator, etc. Make it short and sweet, but not too short 
+				so folks don’t simply skip over it entirely.
+			</p>
+			<!-- <p>
+					<a href="#" class="btn btn-primary my-2">Main call to action</a>
+					<a href="#" class="btn btn-secondary my-2">Secondary action</a>
+			</p> -->
+			</div>
+		</section>
+		<div class="card log shadow-lg mb-5 col-md-4">
 			<div class="mt-3 text-center"><h3>Sign Up</h3></div>
 				<div class="card-body">
         <form>
@@ -33,7 +47,7 @@
         </form>
 		</div>
 		</div>
-  </div>
+</div>
 </template>
 
 <script>
