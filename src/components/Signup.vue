@@ -17,7 +17,7 @@
 		<div class="card log shadow-lg mb-5 col-md-4">
 			<div class="mt-3 text-center"><h3>Sign Up</h3></div>
 				<div class="card-body">
-        <form action="http://127.0.0.1:8000/api/auth/register" method="post" @submit="addUser">
+        <form @submit.prevent="addUser">
             <div class="form-group">
                 <label class="lab"><strong>Name</strong></label>
                 <input type="text" class="form-control form-control-lg" v-model="name" name="name" required autofocus placeholder="Enter Name"/>
@@ -38,7 +38,7 @@
                 <input type="password" class="form-control form-control-lg" v-model="confirm_password" name="confirm_password" required placeholder="Confirm password" />
             </div>
 
-            <button type="submit" @click="addUser" class="btn btsg btn-lg btn-block">Sign Up</button>
+            <button type="submit" class="btn btsg btn-lg btn-block">Sign Up</button>
 							<hr>
             <p class="forgot-password ">
                 Already registered ?
@@ -68,13 +68,13 @@ export default {
 	methods: {
 		// addUser function
 		addUser() {
-      this.submitted = true;
+		this.submitted = true;
 
 			axios.post("http://127.0.0.1:8000/api/auth/register", {
 				name: this.name,
 				email: this.email,
 				password: this.password,
-				c_password: this.confirm_password
+				password_confirmation: this.confirm_password
 
 			})
 			// promises
