@@ -17,28 +17,28 @@
 		<div class="card log shadow-lg mb-5 col-md-4">
 			<div class="mt-3 text-center"><h3>Sign Up</h3></div>
 				<div class="card-body">
-        <form>
+        <form action="http://127.0.0.1:8000/api/auth/register" method="post" @submit="addUser">
             <div class="form-group">
                 <label class="lab"><strong>Name</strong></label>
-                <input type="text" class="form-control form-control-lg" required autofocus placeholder="Enter Name"/>
+                <input type="text" class="form-control form-control-lg" v-model="name" name="name" required autofocus placeholder="Enter Name"/>
             </div>
 
             <div class="form-group">
                 <label class="lab"><strong>Email address</strong></label>
-                <input type="email" class="form-control form-control-lg" required placeholder="Enter e-mail address"/>
+                <input type="email" class="form-control form-control-lg" v-model="email" name="email" required placeholder="Enter e-mail address"/>
             </div>
 
             <div class="form-group">
                 <label class="lab"><strong>Password</strong></label>
-                <input type="password" class="form-control form-control-lg" required placeholder="Enter password" />
+                <input type="password" class="form-control form-control-lg" v-model="password" name="password" required placeholder="Enter password" />
             </div>
 
 			<div class="form-group">
                 <label class="lab"><strong>Confirm Password</strong></label>
-                <input type="password" class="form-control form-control-lg" required placeholder="Confirm password" />
+                <input type="password" class="form-control form-control-lg" v-model="confirm_password" name="confirm_password" required placeholder="Confirm password" />
             </div>
 
-            <button type="submit" class="btn btsg btn-lg btn-block">Sign Up</button>
+            <button type="submit" @click="addUser" class="btn btsg btn-lg btn-block">Sign Up</button>
 							<hr>
             <p class="forgot-password ">
                 Already registered ?
@@ -51,9 +51,45 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {}
-        }
-    }
+import axios from 'axios'
+
+export default {
+	data() {
+		return {
+			name: '',
+			email: '',
+			password: '',
+			confirm_password: '',
+
+			submitted: false
+		}
+	},
+
+	methods: {
+		// addUser function
+		addUser() {
+      this.submitted = true;
+
+			axios.post("http://127.0.0.1:8000/api/auth/register", {
+				name: this.name,
+				email: this.email,
+				password: this.password,
+				c_password: this.confirm_password
+
+			})
+			// promises
+			.then(function (response) {
+				console.log(response);
+			})
+			.catch(function (error) {
+				console.log(error);
+			});
+
+			alert('creating user...')
+			
+		}
+	},
+}
+
+
 </script>
