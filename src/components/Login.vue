@@ -19,19 +19,19 @@
 		<div class="card log shadow-lg">
 		<div class="mt-3 text-center "><h3 class="lab">Sign In</h3></div>
 		<div class="card-body">
-		<form class="">
+		<form class="" @submit.prevent="login">
 
 			<div class="form-group mt-5">
 					<label class="lab"><strong>Email address</strong></label>
-					<input type="email" class="form-control form-control-lg" required autofocus placeholder="Enter e-mail"/>
+					<input type="email" class="form-control form-control-lg" v-model="user.email" name="email" required autofocus placeholder="Enter e-mail"/>
 			</div>
 
 			<div class="form-group">
 					<label class="lab"><strong>Password</strong></label>
-					<input type="password" class="form-control form-control-lg" required placeholder="Enter password"/>
+					<input type="password" class="form-control form-control-lg" v-model="user.password" name="password" required placeholder="Enter password"/>
 			</div>
 
-			<button type="submit" class="btn btn-lg btn-block btsg">Sign In</button>
+			<button class="btn btn-lg btn-block btsg">Sign In <i class="fas fa-sign-out-alt"></i></button>
 					<hr>
 			<div class="">			Don't have an account ?
 					<router-link to="/signup" class="text-primary "> <b>Sign up.</b></router-link>
@@ -47,9 +47,36 @@
 </template>
 
 <script>
-    export default {
-        data() {
-            return {}
-        }
-    }
+	import axios from 'axios'
+
+	export default {
+		name: 'app',
+		data() {
+			return {
+					user:{
+						email: '',
+						password: '',
+					},
+					submitted: false
+			}
+		},
+		methods: {
+			login() {
+				this.submitted = true;
+
+				// axios
+				axios.post("http://127.0.0.1:8000/api/auth/login", {
+					email: this.user.email,
+					password: this.user.password
+				})
+				.then(function (response) {
+					console.log(response);
+				})
+				.catch(function (error) {
+					console.log(error);
+				})
+			}
+		},
+	}
+
 </script>

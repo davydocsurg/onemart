@@ -239,3 +239,8 @@
     margin-top: 0px !important;
   }
 }
+
+input {
+  color: #030303 !important;
+  font-style: italic !important;  
+}

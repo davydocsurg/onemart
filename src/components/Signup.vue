@@ -14,82 +14,94 @@
 			</p> -->
 			</div>
 		</section>
-		<div class="card log shadow-lg mb-5 col-md-4">
-			<div class="mt-3 text-center"><h3>Sign Up</h3></div>
-				<div class="card-body">
-        <form @submit.prevent="addUser">
+<div class="card log shadow-lg mb-5 col-md-4">
+	<div class="mt-3 text-center"><h3>Sign Up</h3></div>
+	<div class="card-body">
+        <form @submit.prevent="addUser" >
             <div class="form-group">
                 <label class="lab"><strong>Name</strong></label>
-                <input type="text" class="form-control form-control-lg" v-model="name" name="name" required autofocus placeholder="Enter Name"/>
+                <input type="text" class="form-control form-control-lg" v-model="user.name" name="name" required autofocus placeholder="Enter Name"/>
             </div>
 
             <div class="form-group">
                 <label class="lab"><strong>Email address</strong></label>
-                <input type="email" class="form-control form-control-lg" v-model="email" name="email" required placeholder="Enter e-mail address"/>
+                <input type="email" class="form-control form-control-lg" v-model="user.email" name="email" required placeholder="Enter e-mail address"/>
             </div>
 
             <div class="form-group">
                 <label class="lab"><strong>Password</strong></label>
-                <input type="password" class="form-control form-control-lg" v-model="password" name="password" required placeholder="Enter password" />
+                <input type="password" class="form-control form-control-lg" v-model="user.password" name="password" required placeholder="Enter password" />
             </div>
 
 			<div class="form-group">
                 <label class="lab"><strong>Confirm Password</strong></label>
-                <input type="password" class="form-control form-control-lg" v-model="confirm_password" name="confirm_password" required placeholder="Confirm password" />
+                <input type="password" class="form-control form-control-lg" v-model="user.confirm_password" name="confirm_password" required placeholder="Confirm password" />
             </div>
 
-            <button type="submit" class="btn btsg btn-lg btn-block">Sign Up</button>
-							<hr>
+            <button  class="btn btsg btn-lg btn-block">Sign Up</button>
+				<hr>
             <p class="forgot-password ">
                 Already registered ?
                 <router-link :to="{name: 'login'}"><b>Sign in.</b></router-link>
             </p>
         </form>
 		</div>
-		</div>
+	</div>
 </div>
 </template>
 
 <script>
 import axios from 'axios'
+import { mapState, mapActions } from 'vuex'
+
 
 export default {
+name: 'app', 
 	data() {
 		return {
-			name: '',
-			email: '',
-			password: '',
-			confirm_password: '',
+			user: {
+				name: '',
+				email: '',
+				password: '',
+				confirm_password: '',
+			},
 
 			submitted: false
 		}
 	},
 
+	computed: {
+		...mapState('account', ['status'], {
+		alert: state => state.alert
+		})
+	},
+
 	methods: {
+		...mapActions([
+		'addUser','account', ['register'],
+		{clearAlert: 'alert/clear'}
+		]),
 		// addUser function
 		addUser() {
-		this.submitted = true;
+			this.submitted = true;
 
+			// axios 
 			axios.post("http://127.0.0.1:8000/api/auth/register", {
-				name: this.name,
-				email: this.email,
-				password: this.password,
-				password_confirmation: this.confirm_password
-
+				name: this.user.name,
+				email: this.user.email,
+				password: this.user.password,
+				password_confirmation: this.user.confirm_password
 			})
+
 			// promises
 			.then(function (response) {
 				console.log(response);
 			})
 			.catch(function (error) {
 				console.log(error);
-			});
+			})
+			}
+		},
 
-			alert('creating user...')
-			
-		}
-	},
-}
-
-
+	}
 </script>
