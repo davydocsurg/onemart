@@ -1,0 +1,69 @@
+<mxfile host="app.diagrams.net" modified="2023-03-31T10:07:07.877Z" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36" version="21.1.2" etag="GtwnBYTU_cK8TbZGUDP8" type="github">
+  <diagram name="Page-1" id="OC_qVcGlNLEOAf9SV1fg">
+    <mxGraphModel>
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="2" value="CI/CD Process" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="490" width="114" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="3" value="Security Challenges" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="469" y="84" width="155" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="4" value="Secure Container Images" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry y="167" width="192" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="5" value="Vulnerability Scanning" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="242" y="167" width="174" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="6" value="Secrets Management" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="466" y="167" width="163" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="7" value="Infrastructure as Code Security" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="678" y="167" width="238" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="8" value="Access Control &amp; Identity" style="whiteSpace=wrap;strokeWidth=2;" vertex="1" parent="1">
+          <mxGeometry x="966" y="167" width="196" height="34" as="geometry" />
+        </mxCell>
+        <mxCell id="9" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.4987664473684211;exitY=0.9852941176470589;entryX=0.5023185483870968;entryY=-0.014705882352941176;" edge="1" parent="1" source="2" target="3">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="10" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.0030241935483870967;exitY=0.6887061672286888;entryX=0.4998575846354167;entryY=0;" edge="1" parent="1" source="3" target="4">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="96" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="11" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.0030241935483870967;exitY=0.9136062001670708;entryX=0.4984509698275862;entryY=0;" edge="1" parent="1" source="3" target="5">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="329" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="12" value="" style="curved=1;startArrow=none;endArrow=block;exitX=0.5023185483870968;exitY=0.9705882352941176;entryX=0.4960697852760736;entryY=0;" edge="1" parent="1" source="3" target="6">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="13" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1.0016129032258065;exitY=0.8577630463591971;entryX=0.5002461922268907;entryY=0;" edge="1" parent="1" source="3" target="7">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="797" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="14" value="" style="curved=1;startArrow=none;endArrow=block;exitX=1.0016129032258065;exitY=0.6616524892003242;entryX=0.5007374043367347;entryY=0;" edge="1" parent="1" source="3" target="8">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1064" y="142" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
